@@ -29,3 +29,21 @@ jobs:
         docker-compose up --build --detach
         sleep 10
         curl --fail localhost:8000
+
+  check_secrets:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+     - uses: ./.github/actions/prep
+    env:
+      VAULT_PASS: ${{ secrets.VAULT_PASS }}
+    - name: hide credentials from the output
+    run: |
+      echo "::add-mask::$POSTGRES_USER"
+      echo "::add-mask::$POSTGRES_PASSWORD"
+      echo "::add-mask::$POSTGRES_DB"
+
+        

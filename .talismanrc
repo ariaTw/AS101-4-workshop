@@ -1,0 +1,12 @@
+fileignoreconfig:
+- filename: env_secrets
+  checksum: 37ab3caa8f8f403f4c14fa5b0df73ea8cc38c78e87e45842e8d1c7ba379f277f
+- filename: talisman_report/talisman_reports/data/report.json
+  checksum: 8a8c3773058812d1256534ecbfd65193f167c9f033ad697185a02d1c92d7f025
+- filename: .github/prep/entrypoint.sh
+  checksum: 32f2172cd63e7d1b9a2c0876c37ab6bbf1db4b3b2f99aeed36e813c0b68da07e
+- filename: .github/workflows/lint_test.yml
+  checksum: f007233bb7ab70ac290a9a1117a7dfc6632c1b0c6b8ab84d677240d2c0e905dc
+- filename: docker-compose.yml
+  checksum: 041cf7d5ba27c545cf1b76277d0c293431fcbe4d389b0e4025fb6182a6cbe523
+version: ""
